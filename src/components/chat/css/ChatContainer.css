@@ -1,0 +1,159 @@
+.CC-outer {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.CC-outer .empty {
+    background: aliceblue;
+    margin: auto;
+    height: 300px;
+    width: 300px;
+    border-radius: 50px;
+}
+
+.CC-outer .empty div{
+    position: relative;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.CC-heading {
+    height: 50px;
+    font-weight: bold;
+    background: #fff;
+    line-height: 50px;
+    padding-left: 30px;
+}
+
+.CC-messages {
+  background: #40b4ff;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
+  border-radius: 30px;
+ padding: 20px;
+}
+
+.CC-dummy-space {
+    height: 90%;
+}
+
+.CC-message-wrapper {
+    background-color: transparent;
+}
+
+.CC-message {
+    position: relative;
+    background: #fff;
+    line-break: anywhere;
+}
+
+.div-left {
+    width: 300px;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+  }
+  .div-left:before {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border: 10px solid;
+    border-color: transparent #fff transparent transparent;
+    left: -20px;
+    top: 10px;
+  }
+  .div-right {
+    width: 300px;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+    float:right;
+  }
+  .div-right:before {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border: 10px solid;
+    border-color: transparent transparent transparent #fff;
+    right: -20px;
+    top: 10px;
+  }
+
+  .CC-message-sender {
+      font-weight: bold;
+      line-height: 1.5rem;
+  }
+  .CC-message-text {
+    color:#505050;
+    line-height: 1.2rem;
+    white-space: break-spaces;
+  }
+
+.CC-message-time{
+    font-weight: lighter;
+    font-size: .7rem;
+    text-align: right;
+    line-height: .5rem;
+}
+
+.CC-message-istyping {
+    margin-left: 10px;
+    color: #000;
+    background-color: transparent;
+}
+
+
+
+.CC-typingBox {
+    background: #fff;
+    height: 100px;
+}
+
+.CC-typingBox form{
+    margin: 0 auto;
+    padding: 10px 50px;
+    display: flex;
+
+}
+
+.CC-typingBox textarea {
+    font-size: inherit;
+   resize: none;
+   outline: none;
+   border: none;
+   box-shadow: 0px 3px 0px 0px #88c7fa;
+}
+
+.CC-typingBox button{
+    margin: 10px 30px;
+    padding: 3px;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    background: transparent;
+}
+
+
+
+@media screen and (max-width: 500px) {
+
+    .CC-heading {
+        height: 30px;
+        line-height: 30px;
+    }
+
+
+}
+

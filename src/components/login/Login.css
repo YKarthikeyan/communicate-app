@@ -1,0 +1,171 @@
+.LP-Overlay {
+  display: grid;
+  grid-template-columns: 50vw 50vw;
+  grid-template-rows: 25vh 25vh 25vh 25vh;
+  grid-template-areas:
+    "header header"
+    " cover cover"
+    " cover cover";
+}
+
+/* input component begins */
+
+.con-input {
+  background: rgba(242, 243, 247);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  border-radius: 12px;
+  position: relative;
+  width: 240px;
+}
+
+.LP-logo {
+  grid-area: header;
+}
+
+.LP-logo img {
+  width: 500px;
+}
+
+.LP-Cover {
+  background: #fff;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-column-gap: 30px;
+  grid-row-gap: 50px;
+  width: 100vw;
+  grid-area: cover;
+}
+
+.LP-LoginForm {
+  background: #fff;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 50%;
+  width: 350px;
+  padding: 20px;
+  margin: auto;
+  border-radius: 50px;
+  box-shadow: 5px 10px 15px 0px rgb(0 0 0 / 20%);
+}
+
+.LP-LoginForm .title {
+  text-transform: uppercase;
+}
+
+.con-input input {
+  border: 0px;
+  background: transparent;
+  outline: none;
+  font-size: 0.9rem;
+  font-family: "Poppins", sans-serif;
+  margin-left: 8px;
+  width: 200px;
+  transition: all 0.25s ease;
+}
+
+.con-input input:focus {
+  padding-left: 5px;
+  padding-right: 0px;
+}
+
+.con-input input:focus ~ .bg {
+  border: 1px solid #5e5e5e;
+}
+
+.con-input input:focus ~ i {
+  transform: translate(0, -8px);
+  box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+}
+
+.con-input i.icon {
+  order: -1;
+  background: #fff;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 31px;
+  height: 31px;
+  z-index: 20;
+  transition: all 0.25s ease;
+}
+
+.bg {
+  background: transparent;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  box-sizing: border-box;
+  border: 2px solid transparent;
+  transition: all 0.25s ease;
+}
+
+/* input component ends */
+
+.LP-LoginForm button {
+  border: none;
+  outline: none;
+  width: 100px;
+  height: 30px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.LP-LoginForm button:hover {
+  background: #40b4ff;
+}
+
+.LP-Error {
+  position: absolute;
+  transform: translateY(30px);
+  color: red;
+}
+
+.LP-Banner {
+  margin: auto;
+}
+
+.LP-Banner img {
+  width: 750px;
+  height: 450px;
+}
+
+@media screen and (max-width: 800px) {
+  .LP-Cover {
+    grid-template-columns: 1fr;
+  }
+
+  .LP-LoginForm {
+    height: 200px;
+    justify-self: center;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .LP-logo img {
+    width: 350px;
+  }
+
+  .LP-Banner img {
+    width: 350px;
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .LP-Banner img {
+    width: 300px;
+    height: 200px;
+  }
+}

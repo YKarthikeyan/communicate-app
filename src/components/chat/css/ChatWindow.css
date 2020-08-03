@@ -1,0 +1,11 @@
+.CW-outer {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+@media screen and (max-width: 500px) {
+    .CW-outer{
+        flex-direction: column;
+    }
+}
